@@ -3,10 +3,15 @@ const { findAvailablePort } = require('./free-port.js')
 
 const desiredPort = process.env.PORT ?? 3000
 
-const server = http.createServer((_req, res) => {
-  console.log('Request made')
-  res.end('Hello World')
-})
+const processRequest = (req, res) => {
+  if (req.url === '/') {
+    res.statusCode = 200
+    res.setHeader('Content-Type', 'text/plain')
+    res.end('Welcome to the homepage!')
+  }
+}
+
+const server = http.createServer(processRequest)
 
 findAvailablePort(desiredPort).then((port) => {
   server.listen(port, () => {
