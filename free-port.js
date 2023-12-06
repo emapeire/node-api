@@ -1,3 +1,4 @@
+/* eslint-disable space-before-function-paren */
 const net = require('node:net')
 
 function findAvailablePort(desiredPort) {
