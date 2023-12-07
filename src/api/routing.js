@@ -42,5 +42,5 @@ const processRequest = (req, res) => {
 const server = http.createServer(processRequest)
 
 server.listen(8080, () => {
-  console.log('Server listening on port http://localhost:8080')
+  console.log('Server listening on port http://localhost:8080/pokemon/ditto')
 })
