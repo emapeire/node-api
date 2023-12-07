@@ -1,1 +1,14 @@
+### GET
 GET http://localhost:8080/pokemon/ditto
+
+### POST
+POST http://localhost:8080/pokemon
+Content-Type: application/json
+
+{
+    "name": "ditto",
+    "type": "normal",
+    "moves": [
+        "transform"
+    ]
+}
